@@ -4,10 +4,24 @@
 
 <header>
   <nav>
-    <ul>
-      <li><a href="#">Signup</a></li>
-      <li><a href="#">Login</a></li>
+
+    <ul style="font-size:20px;">
+
+      {% if user.is_authenticated %}
+
+
+                        <font color="white"><a href="{% url 'landpage:logout' %}">logout</a></font>
+
+
+                {% else %}
+
+
+                        <a href="{% url 'landpage:login' %}"><font color="#CDCDCD">login/</font></a><a href="{% url 'landpage:signup' %}"><font color="#CDCDCD">signup</font></a>
+
+
+                {% endif %}
     </ul>
+
   </nav>
 </header>
 
