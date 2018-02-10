@@ -4,7 +4,7 @@
 
 {% block body %}
 
-
+<nav class="din">
 {% if all_ngos %}
     <h3>All the upcoming events are as follows:</h3>
     <ul>
@@ -30,7 +30,7 @@
 {% else %}
     <h3>You don't have any ngo's yet....</h3>
 {% endif %}
-
+</nav>
 
 
 <div class="footer">
@@ -45,6 +45,10 @@
 </div>
 
 <style>
+    .din{
+    position:relative;
+    }
+
     .footer{
   background-color: #f2f2f2;
   border-top: solid 1px #dfdfdf;

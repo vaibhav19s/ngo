@@ -7,6 +7,11 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
+from django.shortcuts import render, redirect
+
+from .forms import SignUpForm
 
 def index(request):
     all_ngos=Ngo.objects.all()
@@ -67,6 +72,44 @@ def detail(request):
         'all_events': all_events,
     }
     return render(request, 'landpage/detail.html',context)
+
+
+def home(request):
+    return render(request, 'home.html')
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('home.html')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def favorite(request, event_id):
     event = get_object_or_404(Event, pk=event_id)

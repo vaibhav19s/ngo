@@ -1,6 +1,11 @@
 from django.conf.urls import include,url
 from . import views
 
+from django.conf.urls import url
+from django.contrib.auth import views as auth_views
+from django.contrib import admin
+
+
 app_name = 'landpage'
 
 urlpatterns = [
@@ -12,6 +17,13 @@ urlpatterns = [
     url(r'^terms/$', views.terms, name='terms'),
     url(r'^privacy/$', views.privacy, name='privacy'),
     url(r'^(?P<ngo_id>[0-9]+)/$' , views.detail , name ='detail'),
+
+
+    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^signup/$', views.signup, name='signup'),
+
+
     url(r'^(?P<event_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
 
     url(r'^register/$', views.register, name='register'),
