@@ -17,6 +17,43 @@ def index(request):
     }
     return render(request, 'landpage/index.html' , context)
 
+def FAQ(request):
+    all_ngos=Ngo.objects.all()
+    all_events=Event.objects.all()
+    context={
+        'all_ngos':all_ngos,
+        'all_events':all_events,
+    }
+    return render(request, 'landpage/FAQ.html' , context)
+
+def privacy(request):
+    all_ngos=Ngo.objects.all()
+    all_events=Event.objects.all()
+    context={
+        'all_ngos':all_ngos,
+        'all_events':all_events,
+    }
+    return render(request, 'landpage/privacy.html' , context)
+
+def terms(request):
+    all_ngos=Ngo.objects.all()
+    all_events=Event.objects.all()
+    context={
+        'all_ngos':all_ngos,
+        'all_events':all_events,
+    }
+    return render(request, 'landpage/terms.html' , context)
+
+def about_us(request):
+    all_ngos=Ngo.objects.all()
+    all_events=Event.objects.all()
+    context={
+        'all_ngos':all_ngos,
+        'all_events':all_events,
+    }
+    return render(request, 'landpage/about_us.html' , context)
+
+
 def homepage(request):
     return render(request, 'landpage/homepage.html')
 

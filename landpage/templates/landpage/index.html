@@ -35,12 +35,12 @@
 
 <div class="footer">
      <div class="left">
-       <span><a href="#">FAQ</a></span>
-       <span><a href="#">About Us</a></span>
+       <span><a href="{% url 'landpage:FAQ' %}">FAQ</a></span>
+       <span><a href="{% url 'landpage:about_us' %}">About Us</a></span>
      </div>
      <div class="right">
-       <span><a href="#">Privacy</a></span>
-       <span><a href="#">Terms and Conditions</a></span>
+       <span><a href="{% url 'landpage:privacy' %}">Privacy</a></span>
+       <span><a href="{% url 'landpage:terms' %}">Terms and Conditions</a></span>
      </div>
 </div>
 

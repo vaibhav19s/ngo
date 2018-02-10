@@ -1,0 +1,58 @@
+{% extends 'landpage/base.html' %}
+{% block ngo_active %}active{% endblock %}
+
+{% block body %}
+
+{% for ngo in all_ngos %}
+
+    {{ngo.name}}
+
+{% endfor %}
+
+<div class="footer">
+     <div class="left">
+       <span><a href="{% url 'landpage:FAQ' %}">FAQ</a></span>
+       <span><a href="{% url 'landpage:about_us' %}">About Us</a></span>
+     </div>
+     <div class="right">
+       <span><a href="{% url 'landpage:privacy' %}">Privacy</a></span>
+       <span><a href="{% url 'landpage:terms' %}">Terms and Conditions</a></span>
+     </div>
+</div>
+
+<style>
+    .footer{
+  background-color: #f2f2f2;
+  border-top: solid 1px #dfdfdf;
+  margin-top: 30px;
+  padding-top: 45px;
+  margin-bottom: 0;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+/*   align-self: flex-end; */
+
+}
+
+.footer a{
+  margin: 10px;
+}
+.footer a:active{
+  color: tomato;
+}
+
+
+.left{
+  /*background-color: lightblue;*/
+  padding-left: 27px;
+}
+
+.right{
+  /*background-color: lightgreen;*/
+  padding-right: 27px;
+}
+</style>
+
+
+{% endblock %}

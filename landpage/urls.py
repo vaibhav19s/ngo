@@ -7,6 +7,10 @@ urlpatterns = [
     url(r'^$', views.homepage, name='homepage'),
     url(r'^index/$', views.index, name='index'),
     url(r'^detail/$', views.detail, name='detail'),
+    url(r'^FAQ/$', views.FAQ, name='FAQ'),
+    url(r'^about_us/$', views.about_us, name='about_us'),
+    url(r'^terms/$', views.terms, name='terms'),
+    url(r'^privacy/$', views.privacy, name='privacy'),
     url(r'^(?P<ngo_id>[0-9]+)/$' , views.detail , name ='detail'),
     url(r'^(?P<event_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
 
