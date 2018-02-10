@@ -25,12 +25,14 @@
    </div>
    <div class="footer">
      <div class="left">
-       <span><a href="#">FAQ</a></span>
-       <span><a href="#">About Us</a></span>
-     </div>
+       <span><a href="{% url 'landpage:FAQ' %}">FAQ</a></span>
+       <span><a href="{% url 'landpage:about_us' %}">About Us</a></span>
+       <span><a href="{% url 'landpage:privacy' %}">Privacy</a></span>
+       <span><a href="{% url 'landpage:terms' %}">Terms and Conditions</a></span>
+      </div>
      <div class="right">
-       <span><a href="#">Privacy</a></span>
-       <span><a href="#">Terms and Conditions</a></span>
+       <span><a href="{% url 'landpage:about_us' %}">New to our platform, connect with us as a NGO</a></span>
+       <span><a href="{% url 'landpage:about_us' %}">Login as a Ngo</a></span>
      </div>
    </div>
 </div>
@@ -120,6 +122,10 @@ input:hover, input:active{
   flex-direction: row;
   justify-content: space-between;
 /*   align-self: flex-end; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
 }
 
