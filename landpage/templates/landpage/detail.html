@@ -1,0 +1,42 @@
+{% extends 'landpage/base.html' %}
+{% block ngo_active %}active{% endblock %}
+
+{% block body %}
+
+{% for ngo in all_ngos %}
+<tr>
+    <div class="event-container">
+              <div class="date-box">
+                <div style="font-size: 2em;">AUG</div>
+                <div style="font-size: 4em; margin-top:-30px;">22</div>
+              </div>
+            <div class="event-details-box">
+              <div><h5>{{ngo.name}}</h5></div>
+              <div>Address : {{ngo.address}}</div>
+              <div>Email-id : {{ngo.emailid}}</div>
+              <div><i class="fa fa-map-marker"></i> Contact : {{ngo.contact}} </div>
+              <div><i class="fa fa-clock-o"></i> About : {{ngo.about}}</div>
+            </div>
+        </div>
+
+</tr>
+{% endfor %}
+
+{% endblock %}
+
+
+ <!--
+    <td>{{ event.event_name }}</td>
+    <td>
+        <a href="{% url 'landpage:favorite' event.id %}" class="btn-favorite"></a>
+    </td>
+    <td>
+        <form action="{% url 'landpage:delete_event' ngo.id event.id %}" method="post" style="display: inline;" >
+            {% csrf_token %}
+            <input type="hidden" name="event_id" value="{{ event.id }}" />
+            <button type="submit" class="btn btn-danger btn-xs">
+                <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+            </button>
+        </form>
+    </td>
+    -->

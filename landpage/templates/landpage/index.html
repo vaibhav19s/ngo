@@ -1,0 +1,111 @@
+{% extends 'landpage/base.html' %}
+{% block ngo_active %}active{% endblock %}
+
+
+{% block body %}
+
+
+{% if all_ngos %}
+    <h3>All the upcoming events are as follows:</h3>
+    <ul>
+
+{% for event in all_events %}
+
+		<div class="event-container">
+              <div class="date-box">
+                <div style="font-size: 2em;">AUG</div>
+                <div style="font-size: 4em; margin-top:-30px;">22</div>
+              </div>
+            <div class="event-details-box">
+              <div><h5>{{event.event_name}}</h5></div>
+              <div>NGO : {{event.ngo}}</div>
+              <div>Detail : {{event.event_about}}</div>
+              <div><i class="fa fa-map-marker"></i> Date : {{event.event_date}} </div>
+              <div><i class="fa fa-clock-o"></i> Time : {{event.event_time}}</div>
+            </div>
+        </div>
+{% endfor %}
+
+    </ul>
+{% else %}
+    <h3>You don't have any ngo's yet....</h3>
+{% endif %}
+
+
+
+<div class="footer">
+     <div class="left">
+       <span><a href="#">FAQ</a></span>
+       <span><a href="#">About Us</a></span>
+     </div>
+     <div class="right">
+       <span><a href="#">Privacy</a></span>
+       <span><a href="#">Terms and Conditions</a></span>
+     </div>
+</div>
+
+<style>
+    .footer{
+  background-color: #f2f2f2;
+  border-top: solid 1px #dfdfdf;
+  margin-top: 30px;
+  padding-top: 45px;
+  margin-bottom: 0;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+/*   align-self: flex-end; */
+
+}
+
+.footer a{
+  margin: 10px;
+}
+.footer a:active{
+  color: tomato;
+}
+
+
+.left{
+  /*background-color: lightblue;*/
+  padding-left: 27px;
+}
+
+.right{
+  /*background-color: lightgreen;*/
+  padding-right: 27px;
+}
+</style>
+
+
+
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+
+{% endblock %}

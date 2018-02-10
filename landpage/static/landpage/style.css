@@ -1,0 +1,94 @@
+body {
+    background: white url("images/background.png");
+    position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+ul.errorlist {
+    padding-left: 0;
+}
+
+ul.errorlist > li {
+    list-style: none;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+}
+
+.glyphicon-star {
+    color: #CCCCCC;
+    font-size: 16px;
+}
+
+.glyphicon-star.active {
+    color: #FDB230;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.date-box{
+  background-color: #004466;
+  color: white;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  float:left;
+}
+
+.event-details-box{
+  padding: 5px;
+  float: left;
+  width:100%;
+  height:140;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.event-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.event-container:hover {
+-webkit-box-shadow: -5px 5px 8px -3px rgba(0,0,0,0.3);
+-moz-box-shadow: -5px 5px 8px -3px rgba(0,0,0,0.3);
+box-shadow: -5px 5px 8px -3px rgba(0,0,0,0.3);
+}
+
+.page-banner {
+  height: 200px;
+  background-image: url('https://ak4.picdn.net/shutterstock/videos/27730204/thumb/1.jpg');
+}
+
+
+
+
