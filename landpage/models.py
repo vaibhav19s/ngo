@@ -6,6 +6,7 @@ class Ngo(models.Model):
     contact = models.CharField(max_length=10)
     emailid = models.CharField(max_length=30)
     about = models.CharField(max_length=250)
+    website = models.CharField(max_length=250)
 
     def __str__(self):
         return self.name

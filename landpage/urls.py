@@ -17,7 +17,6 @@ urlpatterns = [
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^terms/$', views.terms, name='terms'),
     url(r'^privacy/$', views.privacy, name='privacy'),
-    url(r'^(?P<ngo_id>[0-9]+)/$' , views.detail , name ='detail'),
 
 
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
@@ -27,7 +26,8 @@ urlpatterns = [
     url(r'^signupNGO/ngo_page/cangote.html/$', views.ngo_info, name='signupNGO/ngo_page/cangote.html'),
     url(r'^signupNGO/$', views.signupNGO, name='signupNGO'),
     url(r'^accounts/profile/$', views.index, name='accounts/profile'),
-    url(r'^viewpage/$', views.viewpage, name='viewpage'),
+
+    url(r'^(?P<ngo_id>[0-9]+)/$' , views.viewpage , name ='viewpage'),
 
     url(r'^(?P<event_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
 

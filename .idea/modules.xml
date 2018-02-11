@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../NGO_Signup/.idea/extra-fields.iml" filepath="$PROJECT_DIR$/../NGO_Signup/.idea/extra-fields.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Viberr-master/.idea/Viberr-master.iml" filepath="$PROJECT_DIR$/../Viberr-master/.idea/Viberr-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cangote/.idea/cangote.iml" filepath="$PROJECT_DIR$/../cangote/.idea/cangote.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ngo.iml" filepath="$PROJECT_DIR$/.idea/ngo.iml" />
     </modules>
   </component>

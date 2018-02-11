@@ -18,7 +18,7 @@
               </div>
             <div class="event-details-box">
               <div><h5>{{event.event_name}}</h5></div>
-                <div>NGO :<a href="{% url 'landpage:viewpage' %}"> {{event.ngo}}</a></div>
+                <div>NGO :<a href="{% url 'landpage:detail' %}"> {{event.ngo}}</a></div>
               <div>Detail : {{event.event_about}}</div>
               <div><i class="fa fa-map-marker"></i> Date : {{event.event_date}} </div>
               <div><i class="fa fa-clock-o"></i> Time : {{event.event_time}}</div>
