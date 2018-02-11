@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': 'login.html'}, name='logout'),
     url(r'^logout/login.html/$', views.index, name='logout/login.html'),
     url(r'^signup/$', views.signup, name='signup'),
-    url(r'^signupNGO/ngo_page/cangote.html/$', views.ngo_info, name='signupNGO/ngo_page/cangote.html'),
+    url(r'^signupNGO/ngo_page/cangote.html/$', views.index, name='signupNGO/ngo_page/cangote.html'),
     url(r'^signupNGO/$', views.signupNGO, name='signupNGO'),
     url(r'^accounts/profile/$', views.index, name='accounts/profile'),
 
