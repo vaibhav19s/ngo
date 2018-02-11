@@ -3,22 +3,35 @@
 
 {% block body %}
 
-{% for ngo in all_ngos %}
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	</head>
 
-    {{ngo.name}}
-
-{% endfor %}
+<h1><center>About Us</center></h1>
+	<div class="jumbotron">
+		<div class="container">
+			<p><strong>CANGOTE stands for Connect All NGO's To Everyone.</strong> The meaning of the full form leaves no room for doubt as to what the website is about. The idea was conceived during an educational trek to a slum under the Jasola flyover. The environment was enough to make us realize that something needed to be done about such slums in any way we can do. We being engineers knew only one way to this ie create something new from scratch. This website provides a common platform for the NGO's and volunteers to interact. Such an approach will allow the lesser known NGO's to come into the limelight and attract volunteers for their daily work or any special events. Our team consists of four enthusiastic engineers who are Yatin Yadav, Vaibhav Sharma, Keshav Aggarwal and Alind Gupta. We hoped to give back to the society in any way we believe that CANGOTE is the right way to do it. </p>
+		</div>
+	</div>
 
 <div class="footer">
      <div class="left">
        <span><a href="{% url 'landpage:FAQ' %}">FAQ</a></span>
        <span><a href="{% url 'landpage:about_us' %}">About Us</a></span>
-     </div>
-     <div class="right">
        <span><a href="{% url 'landpage:privacy' %}">Privacy</a></span>
        <span><a href="{% url 'landpage:terms' %}">Terms and Conditions</a></span>
+      </div>
+     <div class="right">
+       <span><a href="{% url 'landpage:signupNGO' %}">New to our platform, connect with us as a NGO</a></span>
+       <span><a href="{% url 'landpage:login' %}">Login as a Ngo</a></span>
      </div>
-</div>
+   </div>
 
 <style>
     .footer{
@@ -32,10 +45,7 @@
   flex-direction: row;
   justify-content: space-between;
 /*   align-self: flex-end; */
-position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
 
 }
 

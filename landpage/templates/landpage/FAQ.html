@@ -3,22 +3,66 @@
 
 {% block body %}
 
-{% for ngo in all_ngos %}
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	</head>
 
-    {{ngo.name}}
+<h1><center>FAQs</center></h1>
+<h3 class="identity"><center>For users</center></h3>
+	<div class="container">
+		<div class="jumbotron">
+			<p class="queries"><strong>1. How will this website help me?</strong></p>
+				<p>A. This website will help you in widening your field of view of all the ngo's in and around your area and channelise all your energy in the right direction.</p>
+				<p class="queries"><strong>2.  Will the Ngo's be able to see my profile?</strong></p>
+				<p>A. The choice is yours. You can choose to be in "available' mode whenever you are free which will allow the ngo's to see your profile and contact you if needed.</p>
+				<p class="queries"><strong>3. Will there be an award to do regular social work via this website?</strong></p>
+				<p>A. Although the happiness you would bring to people's lives will be an award in itself, a leaderboard will be maintained monthly and points will be awarded on the basis of the work and amout of time put in. The top volunteer will be provided with a government reconginsed certificate.</p>
+				<p class="queries"><strong>4. How many NGO's can I be associated to at a time?</strong></p>
+				<p>A. There is no limit on the number of NGO's you can be associated with as many as you want to.</p>
+				<p class="queries"><strong>5. Are there any consequences for unprofessional behaviour on my part?</strong></p>
+				<p>A. The consequences range from mild (award of negative points) to grave (disability of user's account).</p>
+				<p class="queries"><strong>6. Are there any provisions for me to donate money to the NGO's?</strong></p>
+				<p>A. Yes, visit the desired NGO's profile for more details.</p>
+				<p class="queries"><strong>7. How can I be sure of the authenticity of an NGO?</strong></p>
+				<p>A. All the NGO's listed on the website are registered with the government. You can also ask the NGO a copy of its government-approval certificate and they will reply back to you within 15 days.</p>
+				<p class="queries"><strong>8. Can I host an event on the website?</strong></p>
+				<p>A. Yes, you can also invite other users to have a look at your event.</p>
+				<p class="queries"><strong>9. Can I share my experiences on the website?</strong></p>
+				<p>A. Yes, we have provided a review system for each NGO which can be reviewed and rated by each user .</p>
+		</div>
+	</div>
 
-{% endfor %}
-
+<h3 class="identity"><center>For NGOs</center></h3>
+	<div class="container">
+		<div class="jumbotron">
+				<p><strong>1. How will this website help us?</strong></p>
+				<p>A. This website will allow you to broaden your reach to a wider audience. This will allow the smaller NGO's to come out of the shadows of the larger NGO's. This will also solve the problem of shortage of volunteers who can be summoned at short period of time also.</p>
+				<p><strong>2. How can we be sure of the authenticity of a volunteer?</strong></p>
+				<p>A. All the users of the website are otp verified. We also recommend the NGO's to tell their volunteers to carry an identity proof to the venue of the event.</p>
+				<p><strong>3. How can we raise money for the organisation on the website?</strong></p>
+				<p>A. The NGO's can organise an online campaign on the website to ask for money and willing users can donate money as per your and the user's conviniences.</p>
+				<p><strong>4. Can we collaborate with other NGO's to host an event?</strong></p>
+				<p>A. Yes, we encourage such collaborations because these will help both of the NGO's in widenig their reach.</p>
+		</div>
+	</div>
 <div class="footer">
      <div class="left">
        <span><a href="{% url 'landpage:FAQ' %}">FAQ</a></span>
        <span><a href="{% url 'landpage:about_us' %}">About Us</a></span>
-     </div>
-     <div class="right">
        <span><a href="{% url 'landpage:privacy' %}">Privacy</a></span>
        <span><a href="{% url 'landpage:terms' %}">Terms and Conditions</a></span>
+      </div>
+     <div class="right">
+       <span><a href="{% url 'landpage:signupNGO' %}">New to our platform, connect with us as a NGO</a></span>
+       <span><a href="{% url 'landpage:login' %}">Login as a Ngo</a></span>
      </div>
-</div>
+   </div>
 
 <style>
     .footer{
@@ -30,10 +74,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
 
 }
 

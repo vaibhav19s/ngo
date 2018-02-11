@@ -109,6 +109,9 @@ def signupNGO(request):
 def ngo_info(request):
     return render(request, 'cangote.html')
 
+def ngochange(request):
+    return render(request, 'ngo_page/cangote.html')
+
 def viewpage(request,ngo_id):
     ngo = get_object_or_404(Ngo,pk=ngo_id)
     all_ngos = Ngo.objects.all()
