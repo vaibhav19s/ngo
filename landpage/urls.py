@@ -10,6 +10,7 @@ app_name = 'landpage'
 
 urlpatterns = [
     url(r'^$', views.homepage, name='homepage'),
+    url(r'^homepage/$', views.homepage, name='homepag'),
     url(r'^index/$', views.index, name='index'),
     url(r'^detail/$', views.detail, name='detail'),
     url(r'^FAQ/$', views.FAQ, name='FAQ'),
@@ -23,6 +24,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': 'login.html'}, name='logout'),
     url(r'^logout/login.html/$', views.index, name='logout/login.html'),
     url(r'^signup/$', views.signup, name='signup'),
+    url(r'^signupNGO/$', views.signupNGO, name='signupNGO'),
     url(r'^accounts/profile/$', views.index, name='accounts/profile'),
 
 

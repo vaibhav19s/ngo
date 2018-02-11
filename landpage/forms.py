@@ -14,3 +14,15 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'contact' , )
+
+class SignUpFormNGO(UserCreationForm):
+    name = forms.CharField(max_length=30, required=True,help_text='*Required')
+    email = forms.EmailField(max_length=254, required=True,help_text='*Required')
+    address = forms.CharField(max_length=500,required=True,help_text='*Required')
+    city = forms.CharField(max_length=40,required=True,help_text='*Required')
+    pincode = forms.CharField(max_length=6,required=True,help_text='*Required')
+    contact = forms.CharField(max_length=13, required=False,)
+    #password
+    class Meta:
+        model = User
+        fields = ('username', 'name', 'email', 'password1', 'password2', 'address', 'city', 'pincode', 'contact' )
