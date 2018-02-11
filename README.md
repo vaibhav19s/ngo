@@ -14,6 +14,7 @@ Cangote is an initiative taken to connect the NGO's and the public to cater to t
 7. View entire NGO information in one page
 8. Users can like an event
 9. Addition of events by an NGO
+Isntilled creativity through specificity of CSS
 
 ## Back-end functionality
 
