@@ -9,8 +9,8 @@
 
       {% if user.is_authenticated %}
 
-
-                        <font color="white"><a href="{% url 'landpage:logout' %}">logout</a></font>
+                        <a href="{% url 'landpage:ngochange' %}">&nbsp;{{ user.username }}</a>
+                        <font color="white"><a href="{% url 'landpage:logout' %}">/logout</a></font>
 
 
                 {% else %}

@@ -51,7 +51,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'landpage:homepag' %}">caNGOte</a>
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">caNGOte</a>
         </div>
 
         <!-- Items -->
@@ -71,7 +71,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
                 {% if user.is_authenticated %}
 
                 <a href="{% url 'landpage:ngochange' %}">&nbsp;{{ user.username }}</a>
-                        <a href="{% url 'landpage:logout' %}">&nbsp; logout</a>
+                        <a href="{% url 'landpage:logout' %}">&nbsp;/logout</a>
 
 
                 {% else %}
