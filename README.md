@@ -25,4 +25,4 @@ Isntilled creativity through specificity of CSS
 5. Searching the models by search bar.
 
 ## Site-Map
-
+((in the specification pdf))
